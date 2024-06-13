@@ -1,0 +1,335 @@
+.popups {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, .3);
+	backdrop-filter: var(--backdrop-filter);
+}
+
+.popupsbox {
+	background-color: var(--background-color);
+	min-width: 600px;
+	padding: 2rem;
+	width: 30vw;
+}
+
+.cover {}
+
+.home,.convert {
+	height: var(--home-height);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.contral {
+	background-color: var(--contral-background);
+	min-height: var(--contral-min-height);
+	display: flex;
+	justify-content: space-between;
+}
+.importimagelist{
+}
+.importimagelist ul{
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.importimagelist ul li{
+	width: 160px;
+	height:240px;
+	border:var(--border);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.filelist {
+	width: 100%;
+}
+
+.filelist ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 1rem;
+}
+
+.filelist ul li {
+	max-width: calc(25% - .5rem - var(--common-padding));
+	min-width: 300px;
+	/* padding:8px; */
+	margin: .5rem;
+	background-color: var(--background-color);
+}
+.frame{
+	position: relative;
+}
+.element {
+	position: absolute;
+	background-color: #fff;
+	/* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ccc;
+	margin: 3rem;
+	padding: 20px; */
+}
+.element:hover{
+	outline: 2px solid var(--reverse-color);
+}
+.element:hover::before{
+	display: block;
+	color:var(--reverse-color)
+}
+.element::before{
+	content: attr(data-foo) " ";
+	position: absolute;
+	display: none;
+	white-space: nowrap;
+	overflow: hidden;
+	top: -1.2rem;
+	left:0;
+	font-size:12px;
+	color:var(--sub-color);
+}
+.contrain{
+	min-height: var(--contrain-min-height);
+}
+.menu ul {}
+
+.menu ul li {
+	display: flex;
+	align-items: center;
+	height: 3rem;
+
+}
+
+.imini i svg {
+	width: 12px;
+	height: 12px;
+}
+.imain i svg *{
+	fill:var(--background-color);
+}
+.ireverse i svg *{
+	fill:var(--reverse-color);
+}
+
+.canvas {
+	height: var(--canvas-min-height);
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--canvas-background);
+}
+
+.inputfull {
+	width: 100%;
+	padding: 1rem;
+}
+.inputcolor{
+	width: 24px;
+}
+.inputnone{
+	height:1.5rem;
+	border:0 solid transparent;
+	outline:0 solid transparent;
+	padding:0;
+	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background:transparent;
+}
+.inputnone:hover{
+	outline:1px solid black;
+}
+
+.subnav {
+	position: absolute;
+	background-color: black;
+	left:50%;
+	top: 120%; /* 将 .subnav 定位到父元素的底部 */
+	width: max-content; /* 将宽度设置为内容的最大宽度 */
+	padding: calc(var(--common-padding) / 2) 0;
+}
+
+.subnav span {
+	display: flex; /* 或者 inline-block，根据需要选择 */
+	padding: calc(var(--common-padding) / 2) var(--common-padding);
+	justify-content: space-between;
+	font-size: 14px;
+}
+.subnav span:hover {
+	background-color: rgb(52, 52, 52);
+}
+.fileitem{
+	padding: 1rem;
+}
+.fileitem:hover{
+	animation: outline .3s infinite;
+}
+.dragwindow{
+	-webkit-app-region: drag;
+}
+
+.levela {
+	z-index: 100
+}
+
+.levelb {
+	z-index: 200
+}
+
+.levelc {
+	z-index: 300
+}
+
+.canvascontral{
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.canvaszone{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+.createcenter{
+	overflow: auto;
+   /* height: calc(var(--canvas-min-height) - var(--keyframeanimator-min-height)); */
+}
+.animatorframe{
+	overflow: auto;
+	min-height: var(--keyframeanimator-min-height);
+	background-color: var(--background-color);
+}
+.dangerbutton{
+	background-color: var(--danger-color) !important;
+}
+.asideright{
+	border-left:var(--hrborder)
+}
+.asideleft{
+	border-right:var(--hrborder)
+}
+.activetab{
+	background: #1a1a1a;
+}
+.activetool{
+	background: #189bb9;
+}
+.toolslist ul{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.toolslist ul li{
+	margin:1rem;
+	border:var(--border);
+	border-radius: 1rem;
+	transition: all .3s ease-in-out;
+	position: relative;
+}
+.toolslist ul li:after{
+	filter: grayscale(100%);
+	width: 100%;
+	transition: all .3s ease-in-out;
+	text-align: center;
+	position: absolute;
+ content: attr(data-foo);
+ display: block;
+ font-size: 12px;
+	bottom:-2rem;
+	color:gray
+}
+.toolslist ul li:hover{
+	background-color: var(--reverse-color);
+	border:1px solid rgb(81, 81, 81);
+}
+.toolslist ul li:hover:after{
+	color: black;
+}
+.toolslist ul li a{
+	display: block;
+	background-size: contain;
+	width:128px; height:128px;
+}
+
+.nav-item a, .nav-item.active a{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.nav-item a {
+	color: inherit; /* 保持默认颜色 */
+	text-decoration: none; /* 移除下划线 */
+	font-size: 12px;
+	padding:0 1rem;
+	border-bottom: 4px solid transparent;
+  }
+  
+  .nav-item.active a  {
+	color: white; /* 活动链接的颜色 */
+	/* text-decoration: underline; 活动链接的下划线 */
+	border-bottom: 4px solid white;
+
+  }
+
+.tag{
+ display: flex;	
+ flex-direction: row;
+ flex-wrap: wrap;
+ padding:1rem;
+}
+.tag span{
+}
+.tag s{
+	border:var(--border);
+	text-decoration: none;
+	padding-left:8px;
+    font-size:12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.textarea{
+	height:calc(100% -  5rem);
+	background-color: transparent;
+}
+
+.tempfilter{
+	filter: grayscale(100%) brightness(150%) contrast(200%);;
+}
+
+.languagetype{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	border:var(--hrborder);
+	height: 100%;
+}
+.languagetypeitem {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 3rem;
+}
+.languagetypeitem span{
+	padding:8px;
+	height: 2rem;
+	border: var(--hrborder);
+	margin: 4px;
+}

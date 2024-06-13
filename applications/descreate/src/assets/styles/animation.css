@@ -1,0 +1,5 @@
+@keyframes outline{
+	0%{ outline: 0px solid var(--reverse-color);}
+	50%{ outline: 3px solid var(--reverse-color); }
+	100%{ outline: 0px solid var(--reverse-color); }
+}

@@ -1,0 +1,17 @@
+:root{
+	--header-height: 3rem;
+	--nav-height:2.5rem;
+	--footer-height:2rem;
+	--u-height:1.8rem;
+	--contral-min-height: calc(100vh - var(--header-height));
+	--main-min-height: calc(100vh);
+	/* --canvas-min-height: calc(100vh - var(--nav-height) - var(--u-height)); */
+	--home-height: calc(100vh - var(--header-height) - var(--footer-height));
+	--aside-max-width: 280px;
+	--backdrop-filter: blur(10px);
+	--common-padding:1rem;
+	--scrollbar-width: 6px;
+	--contrain-min-height:calc(100vh - var(--u-height) - var(--nav-height));
+	--canvas-min-height: calc(100vh - var(--nav-height) - var(--u-height) );
+	--keyframeanimator-min-height:200px;
+}

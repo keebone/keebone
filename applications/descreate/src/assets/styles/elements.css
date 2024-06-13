@@ -1,0 +1,189 @@
+
+body,html{
+	background-color: var(--background-color);
+	height: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,ul,li{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+h3{
+	font-size:12px;
+	padding:8px 1rem;
+	font-weight: bolder;
+}
+
+a:link{
+	text-decoration: none;
+	color:var(--font-color);
+}
+a:hover{
+	color:var(--font-color);
+}
+a:visited{
+	color:var(--font-color);
+}
+
+
+main{
+	height: 100vh;
+	/* height: var(--main-min-height); */
+}
+
+nav {
+
+	background-color: var(--nav-background-color);
+	color:var(--nav-font-color);
+	height: var(--nav-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+nav ul li{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: var(--nav-height);
+	padding:0;
+	margin:0;
+	height: 100%;
+}
+aside{
+	min-width: var(--aside-max-width);
+	max-width: var(--aside-max-width);
+	/* padding:1rem; */
+	background-color: var(--background-color);
+}
+aside ul{
+	padding-bottom:1rem;
+	margin-bottom:1rem;
+}
+aside table{
+	padding:0 1rem;
+	font-size: 12px;
+}
+table{
+	width: 100%;
+}
+table tr{
+	height: 26px;
+}
+table tr td:nth-child(odd){
+	color:var(--sub-color)
+}
+hr{
+	border: var(--hrborder);
+	height: 1px;
+	width: 100%;
+}
+i{
+
+	height: fit-content;
+	margin:0;
+}
+i svg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	margin:4px;
+}
+i svg *{
+	fill: var(--main-color);
+}
+.logo i svg{
+	width: 120px !important;
+}
+u{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	height: var(--u-height);
+	background-color: var(--u-background);
+	color:var(--nav-font-color);
+}
+u ul {
+	display: flex;
+	height: var(--u-height);
+	flex-direction: row;
+}
+u ul li{
+	display: flex;
+	align-items: center;
+	padding:8px;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	border-right:1px solid rgb(65, 65, 65);
+}
+textarea,pre{
+	width:100%;
+	padding:1rem;
+	margin:0;
+}
+button,input{
+	padding:0 1rem;
+}
+button,input,textarea{
+	height:var(--nav-height);
+	width: 100%;
+	border:none;
+	border-radius: 0;
+}
+	button:last-child{
+		margin-right: 0;
+	}
+button[type='button']{ }
+button[type='submit']{ 
+	background-color: var(--nav-background-color);
+	color:var(--nav-font-color);
+}
+
+textarea{
+	outline: 1px solid transparent;
+}
+input{
+	outline: 1px solid black;
+}
+
+footer{
+	width: 100%;
+	font-size: 12px;
+	height: var(--footer-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+::-webkit-scrollbar{
+	width: var(--scrollbar-width);
+	height: var(--scrollbar-width);
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+	background-color: var(--scrollbar-thumb-background);
+	border-radius: 10px; /* 滑块的圆角半径 */
+}
+::-webkit-scrollbar-track{
+	background-color: transparent;
+}
+::-webkit-scrollbar-track-piece {
+	background:transparent;
+  }
+  ::-webkit-scrollbar-corner {
+	background:transparent;
+  }

@@ -1,0 +1,11 @@
+{
+	"name": "keebone",
+	"private": true,
+	"workspaces": [
+		"applications/*",
+		"packages/*"
+	],
+	"scripts": {
+		"start": "yarn workspace descreate start"
+	}
+}
